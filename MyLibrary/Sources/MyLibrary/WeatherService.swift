@@ -4,8 +4,13 @@ public protocol WeatherService {
     func getTemperature() async throws -> Int
 }
 
+enum BaseUrl : String {
+    case openweathermap = "https://api.openweathermap.org"
+    case nockServer = "http://localhost:3000"
+}
+
 class WeatherServiceImpl: WeatherService {
-    let url = "https://api.openweathermap.org/data/2.5/weather?q=corvallis&units=imperial&appid=<INSERT YOUR API KEY HERE>"
+    let url = "\(BaseUrl.openweathermap.rawValue)/data/2.5/weather?q=corvallis&units=imperial&appid=67979b31f4afc081ec0e076f8f434aff"
 
     func getTemperature() async throws -> Int {
         return try await withCheckedThrowingContinuation { continuation in
