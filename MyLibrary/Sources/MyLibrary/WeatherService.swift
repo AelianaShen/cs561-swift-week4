@@ -6,11 +6,11 @@ public protocol WeatherService {
 
 enum BaseUrl : String {
     case openweathermap = "https://api.openweathermap.org"
-    case nockServer = "http://localhost:3000"
+    case mockServer = "http://localhost:3000"
 }
 
 class WeatherServiceImpl: WeatherService {
-    let url = "\(BaseUrl.openweathermap.rawValue)/data/2.5/weather?q=corvallis&units=imperial&appid=67979b31f4afc081ec0e076f8f434aff"
+    let url = "\(BaseUrl.mockServer.rawValue)/data/2.5/weather?q=corvallis&units=imperial&appid=67979b31f4afc081ec0e076f8f434aff"
 
     func getTemperature() async throws -> Int {
         return try await withCheckedThrowingContinuation { continuation in
