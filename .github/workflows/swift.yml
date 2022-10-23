@@ -16,10 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: into MyLibrary
-      run: cd MyLibrary
     - name: Build
-      run: swift build -v
+      run: swift build
     - name: run Node
       run: node index.js
     - name: Run tests
