@@ -16,8 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build
-      run: swift build
     - name: run Node
       run: node index.js
     - name: Run tests
