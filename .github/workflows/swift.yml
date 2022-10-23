@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: npm --prefix ./MyLibrary run build --if-present
+      run: swift build --package-path ./MyLibrary
     - name: run Node
       run: node ./MyLibrary/index.js &
     - name: Run tests
