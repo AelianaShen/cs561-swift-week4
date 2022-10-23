@@ -16,9 +16,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build
-      run: swift build --package-path ./MyLibrary
     - name: run Node
       run: node ./MyLibrary/index.js
+    - name: Build
+      run: swift build --package-path ./MyLibrary
     - name: Run tests
       run: swift test -v
