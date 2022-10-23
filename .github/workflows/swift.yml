@@ -21,4 +21,4 @@ jobs:
     - name: run Node
       run: node ./MyLibrary/index.js &
     - name: Run tests
-      run: swift test -v
+      run: swift test --package-path ./MyLibrary
