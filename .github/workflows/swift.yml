@@ -19,6 +19,6 @@ jobs:
     - name: Build
       run: npm --prefix ./MyLibrary run build --if-present
     - name: run Node
-      run: node ./MyLibrary/index.js
+      run: node ./MyLibrary/index.js &
     - name: Run tests
       run: swift test -v
